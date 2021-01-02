@@ -14,6 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.level = NSWindow.Level.mainMenu
         window.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
         window.isReleasedWhenClosed = false
+        window.ignoresMouseEvents = true
         window.center()
 
         let store = Store(withMouseLoc: NSEvent.mouseLocation, andNekoLoc: window.frame.origin)
